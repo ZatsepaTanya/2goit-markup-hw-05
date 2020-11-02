@@ -65,6 +65,7 @@ margin-right: 93px;
     margin-right: 50px;
 }
 .navigation-list-link{
+position: relative;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.143;
@@ -80,6 +81,19 @@ color: var(--title-text-color);
 .header-address-list-link:hover .svg,
 .header-address-list-link:focus .svg{
     fill: var(--accent-color);
+}
+.current{
+    color: var(--accent-color);
+}
+.current::after{
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px
 }
 .header-address{
     margin-left: auto;
@@ -221,6 +235,24 @@ margin-bottom: 50px;
 }
 .our-work-item:not(:last-child){
 margin-right: 30px;
+}
+.our-work-item-box{
+    position: relative;
+}
+.our-work-item-title{
+position: absolute;
+left: 0px;
+bottom: 0px;
+width: 100%;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.143;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+padding: 27px 0px;
+background-color: rgba(47, 48, 58, 0.8);
+color: #fff;
 }
 /* <!------- End Our-work ------>  */
 /* <!------- Our-team ------>  */
@@ -400,6 +432,25 @@ fill: var(--accent-color);
  .portfolio-list-item:not(:nth-child(3n)){
      margin-right: 30px;
  }
+ .portfolio-overlay{
+     position: relative;
+ }
+ .portfolio-overlay-text{
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     padding: 63px 24px;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(33, 150, 243, 0.9);
+
+    
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 1.556;
+     letter-spacing: 0.03em;
+     color: #FFFFFF;
+    }
  .portfolio-list-info{
      width: 100%;
      padding: 20px 24px;
